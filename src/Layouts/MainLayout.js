@@ -6,9 +6,9 @@ import Navbar from '../Layouts/Navbar';
 const useStyles = makeStyles({
   root: {
     width: '100%',
+    paddingLeft: '20%',
   },
   logo: {
-    paddingLeft: '20%',
     paddingTop: '4%',
     paddingBottom: '2%',
   },
