@@ -3,6 +3,7 @@ import { makeStyles } from '@mui/styles';
 import { Typography } from '@mui/material';
 import '../App.css';
 import Navbar from '../Layouts/Navbar';
+
 const useStyles = makeStyles({
   root: {
     width: '100%',

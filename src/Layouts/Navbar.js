@@ -5,11 +5,14 @@ import { Card, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { Box } from '@mui/system';
 import Grow from '@mui/material/Grow';
+import { COLORS } from '../colors';
+import SubMenuBox from './SubMenuBox';
+
 const useStyles = makeStyles({
   bar: {
     width: '58%',
     height: '10%',
-    backgroundColor: '#4d4d4d',
+    backgroundColor: COLORS.GRAY.GRAY,
     paddingTop: '1%',
     paddingBottom: '1%',
     paddingLeft: '2%',
@@ -17,7 +20,7 @@ const useStyles = makeStyles({
     position: 'sticky',
   },
   menuText: {
-    color: '#ebeef5',
+    color: COLORS.WHITE.SEMIWHITE,
     fontWeight: 600,
   },
   menu: {
@@ -26,24 +29,8 @@ const useStyles = makeStyles({
     paddingLeft: '2%',
   },
   focusMenuText: {
-    color: 'yellow',
+    color: COLORS.YELLOW.YELLOW,
     fontWeight: 600,
-  },
-  card: {
-    marginLeft: '1%',
-    width: '10%',
-    height: '20%',
-    paddingTop: '2%',
-    paddingBottom: '2%',
-    paddingLeft: '3%',
-  },
-  subMenu: {
-    textDecoration: 'none',
-    color: '#211f2e',
-  },
-  subText: {
-    textDecoration: 'none',
-    color: '#4b9bc9',
   },
 });
 
@@ -51,21 +38,11 @@ export default function Navbar() {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   function setYellow(e) {
-    e.target.style.color = '#f2e85a';
+    e.target.style.color = COLORS.YELLOW.YELLOW;
   }
 
   function setWhite(e) {
-    e.target.style.color = '#ebeef5';
-  }
-  function setSky(e) {
-    e.target.style.color = '#4b9bc9';
-  }
-
-  function setBlack(e) {
-    e.target.style.color = '#121117';
-  }
-  function setGray(e) {
-    e.target.style.color = '#211f2e';
+    e.target.style.color = COLORS.WHITE.SEMIWHITE;
   }
 
   const openBox = (e) => {
@@ -133,48 +110,12 @@ export default function Navbar() {
           </Link>
         </Grid>
       </div>
-      <div>
-        <Box>
-          <Grow in={open}>
-            <Card className={classes.card}>
-              <Link to='#' className={classes.subMenu}>
-                <p onMouseEnter={setBlack} onMouseLeave={setGray}>
-                  ABOUT US
-                </p>
-              </Link>
-              <p
-                className={classes.subText}
-                onMouseEnter={setBlack}
-                onMouseLeave={setGray}
-              >
-                Sister brand
-              </p>
-              <Link to='#' className={classes.subMenu}>
-                <p onMouseEnter={setSky} onMouseLeave={setBlack}>
-                  JONGGA USA
-                </p>
-              </Link>
-              <p
-                className={classes.subText}
-                onMouseEnter={setBlack}
-                onMouseLeave={setGray}
-              >
-                Corporate Site
-              </p>
-              <Link to='#' className={classes.subMenu}>
-                <p onMouseEnter={setSky} onMouseLeave={setBlack}>
-                  DAESANG AMERICA
-                </p>
-              </Link>
-              <Link to='#' className={classes.subMenu}>
-                <p onMouseEnter={setSky} onMouseLeave={setBlack}>
-                  DAESANG KOREA
-                </p>
-              </Link>
-            </Card>
-          </Grow>
-        </Box>
-      </div>
+      {/*
+        하단은 WHO WE ARE 마우스 enter시 등장하는 submenu 컴포넌트
+      */}
+      {open ? (
+        <SubMenuBox open={open} openBox={openBox} closeBox={closeBox} />
+      ) : null}
     </div>
   );
 }
