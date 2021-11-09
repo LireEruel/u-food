@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     position: 'absolute',
     width: '13%',
     marginLeft: '1%',
+    zIndex: 10,
   },
   card: {
     height: '18%',

@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     paddingLeft: '2%',
   },
   focusMenuText: {
-    color: COLORS.YELLOW.YELLOW,
+    color: COLORS.YELLOW.CORN,
     fontWeight: 600,
   },
 });
@@ -38,7 +38,7 @@ export default function Navbar() {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   function setYellow(e) {
-    e.target.style.color = COLORS.YELLOW.YELLOW;
+    e.target.style.color = COLORS.YELLOW.CORN;
   }
 
   function setWhite(e) {
@@ -51,9 +51,10 @@ export default function Navbar() {
   };
 
   const closeBox = (e) => {
-    setWhite(e);
+    console.log('close');
     setOpen(false);
   };
+
   return (
     <div>
       <div className={classes.bar} onMouseLeave={closeBox}>
@@ -113,9 +114,7 @@ export default function Navbar() {
       {/*
         하단은 WHO WE ARE 마우스 enter시 등장하는 submenu 컴포넌트
       */}
-      {open ? (
-        <SubMenuBox open={open} openBox={openBox} closeBox={closeBox} />
-      ) : null}
+      <SubMenuBox open={open} openBox={openBox} closeBox={closeBox} />
     </div>
   );
 }

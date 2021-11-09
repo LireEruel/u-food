@@ -13,6 +13,7 @@ export const COLORS = {
     BLACK: '#121117',
   },
   YELLOW: {
-    YELLOW: '#f2e85a',
+    CORN: '#f2e85a',
+    LEMON: '#effd5f',
   },
 };

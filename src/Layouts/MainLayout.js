@@ -16,6 +16,8 @@ const useStyles = makeStyles({
   logoText: {
     color: '#0b0645',
     fontWeight: 'bold',
+    fontSize: '3.5rem',
+    margin: '0%',
   },
 });
 
@@ -24,9 +26,7 @@ export default function MainLayout() {
   return (
     <div className={classes.root}>
       <div className={classes.logo}>
-        <Typography className={classes.logoText} variant='h3'>
-          D'Food
-        </Typography>
+        <h3 className={classes.logoText}>D'Food</h3>
       </div>
       <Navbar />
     </div>
