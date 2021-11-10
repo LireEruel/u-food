@@ -3,13 +3,14 @@ import { makeStyles } from '@mui/styles';
 import image1 from '../asset/image/main1.jpg';
 import 'animate.css';
 import { COLORS } from '../colors';
-import { Typography } from '@mui/material';
+import Button from '../components/StyledButton';
 
 const useStyles = makeStyles({
   root: {
     width: '100%',
     height: 700,
     backgroundImage: `url(${image1})`,
+    zIndex: 0,
   },
   topText: {
     paddingTop: '5%',
@@ -30,9 +31,13 @@ const useStyles = makeStyles({
     letterSpacing: '4px',
     fontSize: '2.5rem',
   },
+  button: {
+    marginLeft: '23%',
+  },
   textHighlight: {
     backgroundColor: COLORS.YELLOW.LEMON,
     width: 390,
+    zIndex: 3,
   },
 });
 
@@ -49,7 +54,7 @@ export default function MainPage() {
       </h3>
       <div className={classes.mainText}>
         <div className='animate__animated animate__fadeInLeft'>
-          <h2 className={classes.mainText}>O’FOOD</h2>
+          <h2 className={classes.mainText}>D’FOOD</h2>
         </div>
       </div>
       <div className={classes.bottomText}>
@@ -59,6 +64,9 @@ export default function MainPage() {
             <br /> MEET INNOVATION
           </span>
         </div>
+      </div>
+      <div className='animate__animated animate__fadeInUp'>
+        <Button className={classes.button}>LEARN MORE</Button>
       </div>
     </div>
   );

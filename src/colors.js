@@ -3,7 +3,7 @@ export const COLORS = {
     SEMIWHITE: '#ebeef5',
   },
   BLUE: {
-    SKY: '#46c5db',
+    SKY: '#00b6d6',
     INDIGOBLUE: '#211f2e',
   },
   GRAY: {
@@ -13,7 +13,7 @@ export const COLORS = {
     BLACK: '#121117',
   },
   YELLOW: {
-    CORN: '#f2e85a',
+    CORN: '#fff669',
     LEMON: '#effd5f',
   },
 };
