@@ -18,6 +18,7 @@ const useStyles = makeStyles({
     paddingLeft: '2%',
     borderRadius: 50,
     position: 'sticky',
+    zIndex: 3,
   },
   menuText: {
     color: COLORS.WHITE.SEMIWHITE,

@@ -18,12 +18,12 @@ const StyledButton = styled.button`
   &:hover,
   &:focus {
     background: var(--button-hover-bg-color, #fff669);
+    color: var(--button-color, #000000);
   }
 
   &:disabled {
     cursor: default;
     opacity: 0.5;
-    background: var(--button-bg-color, #fff669);
   }
 `;
 
