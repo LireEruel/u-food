@@ -10,6 +10,7 @@ import SubMenuBox from './SubMenuBox';
 
 const useStyles = makeStyles({
   bar: {
+    top: 0,
     width: '58%',
     height: '10%',
     backgroundColor: COLORS.GRAY.GRAY,
@@ -17,12 +18,14 @@ const useStyles = makeStyles({
     paddingBottom: '1%',
     paddingLeft: '2%',
     borderRadius: 50,
+    position: '-webkit-sticky' /* Safari */,
     position: 'sticky',
     zIndex: 3,
   },
   menuText: {
     color: COLORS.WHITE.SEMIWHITE,
     fontWeight: 600,
+    transitionDelay: '0.1s',
   },
   menu: {
     textDecoration: 'none',

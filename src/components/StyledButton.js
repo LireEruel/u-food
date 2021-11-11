@@ -13,7 +13,8 @@ const StyledButton = styled.button`
   border-radius: var(--button-radius, 8px);
   background: var(--button-bg-color, #00b6d6);
   color: var(--button-color, #ffffff);
-
+  transition: all 0.4s;
+  position: relative;
   &:active,
   &:hover,
   &:focus {
