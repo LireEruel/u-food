@@ -7,7 +7,7 @@ export const COLORS = {
     INDIGOBLUE: '#211f2e',
   },
   GRAY: {
-    GRAY: '#4d4d4d',
+    GRAY: '#4D4E50',
   },
   BLACK: {
     BLACK: '#121117',
